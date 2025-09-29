@@ -126,9 +126,9 @@ async function main(params) {
 //  define port
 let port = process.env.PORT;
 
-// app.get("/", (req, res) => {
-//   res.send("hi  i am route");
-// });
+app.get("/listing", (req, res) => {
+  res.send("hi  i am route");
+});
 
 // /listing
 // app.get("/listing", async (req, res) => {
