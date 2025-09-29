@@ -29,7 +29,7 @@ module.exports.signup2=async (req, res) => {
   };
 
   module.exports.login1= (req, res) => {
-  res.render("LoginPage/login");
+  res.render("LoginPage/Login");
 };
 
 module.exports.login2= async(req, res) => {
