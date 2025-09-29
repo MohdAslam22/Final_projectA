@@ -1,0 +1,73 @@
+<% layout("layouts/boilerlplate") %>
+  <body >
+    
+   <div class="row mt-3">
+    <div class="col-8 offset-2">
+                <h1>edit listing</h1>
+    <form method="post" action="/listing/<%= fd._id %>?_method=PUT" novalidate class="needs-validation" enctype="multipart/form-data">
+       
+      <div class="mb-3">
+        <label for="title" class="form-level">title</label>
+        <input
+          type="text"
+          name="title"
+          value="<%= fd.title %>"
+          class="form-control"
+          required
+        />
+         <div class="valid-feedback">
+                good titile
+    </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="description" class="form-level">description</label>
+        <textarea name="description" class="form-control" required><%= fd.description %></textarea>
+         <div class="invalid-feedback">
+                descreption should be reqiure
+    </div>
+      </div>
+        <div class="mb-3">
+       <h3> Original image </h3>
+        <img src="<%= originalimage %>" alt="image">
+      </div>
+
+      <div class="mb-3">
+        <label for="image" class="form-level">image</label>
+        <input type="file" name="image"  class="form-control"  />
+        
+      </div>
+
+     <div class="row">
+         <div class="mb-3 col-md-4">
+        <label for="price" class="form-level">price</label>
+        <input type="number" name="price" value="<%= fd.price %>" class="form-control" required />
+        <div class="invalid-feedback">
+                price should be reqiure
+    </div>
+      </div>
+
+      <div class="mb-3 col-md-8">
+        <label for="country" class="form-level">country</label>
+        <input type="text" name="country" value="<%= fd.country %>" class="form-control" required />
+        <div class="invalid-feedback">
+                country should be reqiure
+    </div>
+      </div>
+     </div>
+      <div class="mb-3">
+        <label for="location" class="form-level">location</label>
+        <input type="text" name="location" value="<%= fd.location %>" class="form-control"  required/>
+        <div class="invalid-feedback">
+                location should be reqiure
+    </div>
+      </div>
+
+      
+
+      <button class="btn btn-dark btn-edit">submit</button>
+    </form>
+    </div>
+    </div>
+  </body>
+</html>

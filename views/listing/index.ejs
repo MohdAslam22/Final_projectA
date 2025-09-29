@@ -1,0 +1,134 @@
+ <% layout("layouts/boilerlplate") %>
+
+
+<body>
+  
+ <style>
+  #filter {
+     margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-content: space-evenly;
+  }
+
+  .filter{
+    text-align: center;
+   
+   
+  }
+ </style>
+    <!-- <h3> All list here !</h3> -->
+   <!-- creating post
+    <form action="/listing/new" method="get">
+        <button>create new list</button>
+    </form> -->
+
+    <!-- /updatinging  -->
+<div id="filter">
+  <div class="filter">
+    <div><i class="fa-solid fa-fire"></i></div>
+    <p>fire</p>
+  </div>
+  
+   <div class="filter">
+    <div><i class="fa-solid fa-city"></i></div>
+    <p>city</p>
+  </div>
+   <div class="filter">
+    <div><i class="fa-solid fa-umbrella-beach"></i></div>
+    <p>beach</p>
+  </div>
+  
+   <div class="filter">
+    <div><i class="fa-solid fa-person-swimming"></i></div>
+    <p>pool</p>
+  </div>
+   <div class="filter">
+    <div><i class="fa-solid fa-house"></i></div>
+    <p>home</p>
+  </div>
+  
+   <div class="filter">
+    <div><i class="fa-solid fa-igloo"></i></div>
+    <p>igloo</p>
+  </div>
+  
+    <div class="filter">
+    <div><i class="fa-solid fa-water"></i></div>
+    <p>lake</p>
+  </div>
+  
+   <div class="filter">
+    <div><i class="fa-solid fa-place-of-worship"></i></div>
+    <p>villa</p>
+  </div>
+
+    <div class="filter">
+    <div><i class="fa-solid fa-notes-medical"></i></div>
+    <p>medical</p>
+  </div>
+  
+   <div class="filter">
+    <div><i class="fa-solid fa-notes-medical"></i></div>
+    <p>restroom</p>
+  </div>
+    <div class="filter">
+    <div><i class="fa-solid fa-fire"></i></div>
+    <p>fire</p>
+  </div>
+  
+   <div class="filter">
+    <div><i class="fa-solid fa-tower-cell"></i></div>
+    <p>wifi</p>
+  </div>
+    <div class="filter">
+    <div><i class="fa-solid fa-mountain"></i></div>
+    <p>mountain</p>
+  </div>
+  
+   <div class="filter">
+    <div><i class="fa-solid fa-bed"></i></div>
+    <p>bed</p>
+  </div>
+    <div class="filter">
+    <div><i class="fa-solid fa-chess"></i></div>
+    <p>chess</p>
+  </div>
+  
+   <div class="filter">
+    <div><i class="fa-solid fa-chess"></i></div>
+    <p>camping</p>
+  </div>
+    <div class="filter">
+    <div><i class="fa-solid fa-chess"></i></div>
+    <p>tree</p>
+  </div>
+  
+   
+ 
+
+  
+</div>
+
+    
+<div class="row row-cols-lg-4 row-md-2 row-md-1">
+    <% for( list of alllist ) { %> 
+<a href="/listing/<%= list._id %>" class="listing-link">
+    <div class="card col listing-card" style="width: 20rem;">
+  <img src="<%= list.image.url %>" class="card-img-top" style="height: 20rem;"  alt="image">
+  <div class="card-img-overlay">
+    MOHD ASLAM
+  </div>
+  <div class="card-body">
+    <p class="card-text"><b><%= list.title %></b> <br>
+    &#8377;<%= list.price.toLocaleString("en-IN") %>/night</p>
+    
+  </div>
+</div>
+</a>
+  <% } %>
+   
+</div>
+</body>

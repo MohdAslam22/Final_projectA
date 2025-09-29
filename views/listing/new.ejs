@@ -1,0 +1,108 @@
+<% layout("layouts/boilerlplate") %>
+
+<div class="row">
+  <div class="col-8 offset-2">
+    <h2>Adding new list</h2>
+    <form action="/listing" method="post" novalidate class="needs-validation" enctype="multipart/form-data">
+      <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input
+          type="text"
+          id="title"
+          name="title"
+          placeholder="Enter title"
+          class="form-control"
+          required
+        />
+          <div class="valid-feedback">
+                good titile
+    </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <textarea
+          id="description"
+          name="description"
+          class="form-control"
+          required
+        ></textarea>
+           <div class="invalid-feedback">
+           descreption should be fill
+    </div>
+      </div>
+
+      
+
+      <div class="mb-3">
+        <label for="image" class="form-label">Upload Image </label>
+        <input
+          type="file"
+          id="image"
+          name="image"
+          placeholder="Enter image URL"
+          class="form-control"
+          required
+        />
+
+          <div class="invalid-feedback">
+          provide link
+    </div>
+      </div>
+
+      <div class="row">
+        <div class="mb-3 col-md-4">
+          <label for="price" class="form-label">Price</label>
+          <input
+            
+            id="price"
+            name="price"
+            placeholder="Enter price"
+            class="form-control"
+            required
+          />
+
+            <div class="invalid-feedback">
+           price should be fill
+    </div>
+        </div>
+
+        <div class="mb-3 col-md-8">
+          <label for="country" class="form-label">Country</label>
+          <input
+            type="text"
+            id="country"
+            name="country"
+            placeholder="Enter country"
+            class="form-control"
+            required
+          />
+            <div class="invalid-feedback">
+           country should be fill
+    </div>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="location" class="form-label">Location</label>
+        <input
+          type="text"
+          id="location"
+          name="location"
+          placeholder="Enter location"
+          class="form-control"
+          required
+        />
+
+          <div class="invalid-feedback">
+           location should be fill
+    </div>
+      </div>
+
+      <button class="btn btn-dark add-btn" type="submit">Add</button>
+    </form>
+  </div>
+</div>
+
+
+<!-- Bootstrap validation script -->
